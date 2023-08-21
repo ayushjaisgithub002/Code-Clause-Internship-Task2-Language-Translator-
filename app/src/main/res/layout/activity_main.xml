@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:text="Language Translator"
+        android:textColor="#D34A14"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="35dp"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:weightSum="3"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="120dp">
+
+        <Spinner
+            android:id="@+id/s1"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrow_line"
+            app:tint="@color/white"
+            android:layout_gravity="center"/>
+
+        <Spinner
+            android:id="@+id/s2"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_margin="5dp"/>
+        
+    </LinearLayout>
+    
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="180dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:hint="Source Text"
+        android:padding="5dp"
+        android:textColorHint="#D81B1B"
+        app:hintTextColor="#7E1010">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_source"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textImeMultiLine|textMultiLine"
+            android:textColor="@color/black"
+            android:importantForAutofill="no"
+            android:textColorHint="#E1ECEC"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="29dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="280dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/voice"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="330dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_voice"
+        app:tint="#F1DB1F"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/voice"
+        android:text="Say Something"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textColor="#C8A849"/>
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="Translate"
+        android:textAllCaps="false"
+        android:textSize="23dp"
+        android:textColor="#6A0B04"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/t_result"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="23dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColorHint="#702020"
+        android:text="Translate Text"
+        android:textColor="#75CF0C"/>
+</RelativeLayout>
